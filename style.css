@@ -1,0 +1,407 @@
+:root {
+  --primary: #b6895b;
+  --bg: #010101;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+body {
+  font-family: "poppins", sans-serif;
+  background-color: var(--bg);
+  color: #fff;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.4rem 7%;
+  background-color: rgba(1, 1, 1, 0.8);
+  border-bottom: 1px solid var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 9999;
+}
+
+.navbar .navbar-logo {
+  font-size: 30px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.navbar .navbar-logo span {
+  color: var(--primary);
+  font-style: italic;
+}
+
+.navbar .nav a {
+  color: #fff;
+  font-size: 17px;
+  display: inline-block;
+  margin: 0 1rem;
+}
+
+.navbar .nav a:hover {
+  color: #cbb279;
+}
+
+.navbar .nav a::after {
+  content: "";
+  display: block;
+  padding-bottom: 0.5rem;
+  border-bottom: 0.1rem solid var(--primary);
+  transform: scaleX(0);
+  transition: 0.2s;
+}
+
+.navbar .nav a:hover::after {
+  transform: scaleX(0.7);
+}
+
+.navbar .nav-extra a {
+  margin: 0 0.5rem;
+  color: #fff;
+}
+
+.navbar .nav-extra a:hover {
+  color: green;
+}
+
+#menu {
+  display: none;
+}
+/*content*/
+.Home {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url("bg-round.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+.Home::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 30%;
+  bottom: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(1, 1, 3, 1) 9%,
+    rgba(255, 255, 255, 0) 50%
+  );
+}
+
+.Home .content {
+  padding: 1.4rem;
+  max-width: 60rem;
+}
+
+.Home .content h1 {
+  font-size: 5em;
+  color: white;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+}
+
+.Home .content h1 span {
+  color: var(--primary);
+}
+
+.Home .content p {
+  font-size: 1.6rem;
+  margin-top: 1rem;
+  line-height: 1;
+  font-weight: 100;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  mix-blend-mode: difference;
+}
+
+.Home .content .CTA {
+  margin: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: white;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px, 1px, 3px rgb(1, 1, 3, 0.5);
+}
+
+/*About*/
+.about,
+.menu1,
+.contactus {
+  padding: 8rem 7% 1.4rem;
+}
+
+.about h2,
+.menu1 h2,
+.contactus h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu1 h2 span,
+.contactus h2 span {
+  color: var(--primary);
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+
+.about .row .about-img img {
+  width: 100%;
+}
+
+.about .row .about-content {
+  flex: 1 1 35rem;
+  padding: 0 1rem;
+}
+
+.about .row .about-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .about-content p {
+  margin-bottom: 0.8rem;
+  font-size: 1.4rem;
+  font-weight: 170;
+  line-height: 1.6;
+}
+
+.menu1 h2,
+.contactus h2 {
+  margin-bottom: 20px;
+}
+
+.menu1 p,
+.contactus p {
+  text-align: center;
+  margin: auto;
+  max-width: 30rem;
+  line-height: 2;
+  font-weight: 100;
+}
+
+.menu1 .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu1 .row .menu-card {
+  text-align: center;
+  padding-bottom: 1rem;
+}
+
+.row .menu-card img {
+  border-radius: 7%;
+  width: 80%;
+  margin-top: 2rem;
+}
+.menu1 .title-cofee {
+  margin-top: 1rem;
+}
+
+/* Contact */
+.contactus .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+  flex-wrap: wrap;
+}
+
+.contactus .row .map {
+  width: 100%;
+  flex: 1 1 45rem;
+  object-fit: cover;
+}
+
+.contactus .row form {
+  flex: 1 1 45rem;
+  padding: 5rem 2rem;
+}
+
+.contactus .row form .input-groub {
+  display: flex;
+  align-items: center;
+  margin-top: 2rem;
+  background-color: var(--bg);
+  border: 1px solid #eee;
+  padding-left: 2rem;
+}
+
+.contactus .row form .input-groub input {
+  width: 100%;
+  padding: 2rem;
+  font-size: 1.5rem;
+  background: none;
+  color: white;
+}
+
+.contactus .row form .btn {
+  display: inline-block;
+  margin-top: 3rem;
+  padding: 1rem 3rem;
+  font-size: 1.5rem;
+  color: #fff;
+  background-color: var(--primary);
+  cursor: pointer;
+}
+
+footer {
+  background-color: var(--primary);
+  text-align: center;
+  margin-top: 2rem;
+  padding: 1rem 0 2rem;
+}
+footer .social {
+  padding: 1.5rem 0;
+}
+footer .social a {
+  padding: 1rem;
+  color: white;
+}
+
+footer .social a:hover,
+footer .link a:hover {
+  color: var(--bg);
+}
+
+footer .link {
+  margin-bottom: 1rem;
+}
+
+footer .link a {
+  padding: 0.8rem 1rem;
+  color: white;
+  font-size: 1rem;
+}
+
+footer .creadit {
+  font-size: 0.9rem;
+}
+footer .creadit {
+  color: var(--bg);
+  font-weight: 700;
+}
+/* Media */
+
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 75%;
+  }
+  .contactus .row .map {
+    height: 40rem;
+  }
+  .contactus .row form {
+    padding-top: 2rem;
+  }
+}
+/* Tablet*/
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  #menu {
+    display: inline-block;
+  }
+
+  .navbar .nav {
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    width: 30rem;
+    height: 100vh;
+    transition: 0.5s;
+  }
+
+  .navbar .nav {
+    background-color: rgba(10, 8, 8, 0.562);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+
+  .navbar .nav.active {
+    right: 0;
+  }
+  .navbar .nav a {
+    color: #fff;
+    display: block;
+    margin: 1.5rem;
+    padding: 8px;
+    font-size: 2rem;
+  }
+
+  .navbar .nav a::after {
+    transform-origin: 0 0;
+  }
+
+  .navbar .nav a:hover::after {
+    transform: scaleX(0.2);
+  }
+
+  .about .row {
+    flex-wrap: wrap;
+  }
+
+  .about .row .about-img img {
+    height: 24rem;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .about .row .about-content {
+    padding: 0;
+  }
+
+  .about .row .about-content {
+    margin-top: 1rem;
+    font-size: 1.8rem;
+  }
+
+  .menu1 p {
+    font-size: 1.5rem;
+  }
+
+  .contactus .row .map {
+    height: 40rem;
+  }
+
+  .contactus .row form {
+    padding: 1.5rem;
+  }
+}
+/* Mobile*/
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
